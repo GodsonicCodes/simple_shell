@@ -19,13 +19,11 @@
 
 
 <p align="center">
-This project is an implementation of the shell created as a Milestone Project for the C code at ALX Africa Software Engineering. </br>
-The gates of shell is a project in the first trimester, that helps student to understand the advanced
-concepts behind the shell program include process, system call, bit manipulation, file managment, error handling ... </br>
-Shell is a simple UNIX command interpreter that replicates functionalities of the simple shell (sh). </br>
-This program was written entirely in C Language.
+This project represents the realization of a shell, which was developed as a Milestone Project as part of the ALX Africa Software Engineering program.</br>
+Named "The Gates of Shell," this project was undertaken during the first trimester to enhance students' comprehension of advanced shell programming concepts, encompassing processes, system calls, bit manipulation, file management, and error handling.</br>
+Functioning as a straightforward UNIX command interpreter, this program emulates the core functionalities of the basic shell (sh).</br>
+The entire implementation of this project was accomplished using the C programming language.
 </p>
-
 
 
 ## COPYRIGHT
@@ -40,28 +38,28 @@ It is based on the Thompson shell.
 
 ## Environment :
 
-Our shell was built and tested on  Ubuntu 20.04.
+Our shell was tested and built on  Ubuntu 20.04.
 
 
 
-## Features
+## Features of the Project
 * Display a prompt and wait for the user to type a command. A command line always ends with a new line.
-* If an executable cannot be found, print an error message and display the prompt again.
+* Handle the comments `#`
+* * If an executable cannot be found, print an error message and display the prompt again.
 * Handle errors.
 * Hndling the “end of file” condition (Ctrl+D)
 * Hanling the command line with arguments
 * Handle the PATH
+* Support the history feature
 * Support the exit features and the exit status
 * Handle the Ctrl-C to not terminate the shell
 * Handling the command seperator `;`
 * Handling `&&` and `||` logical operators
 * Handle variable replacements `$?` and `$$`
-* Handle the comments `#`
-* Support the history feature
 * Support the file input
 
-## The Builtins
-Our shell has support for the following built-in commands:
+## The Builtins to be used
+Our shell supports the following built-in commands:
 
 | Command             | Definition                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------------- |
@@ -76,7 +74,7 @@ Our shell has support for the following built-in commands:
 
  ## The Installation Process : Getting HSH
  
-Clone the below repository and compile the files into an executable using the GCC compiler.
+You would have to Clone the below repository and compile the files into an executable using the GCC compiler.
 ```
 https://github.com/GodsonicCodes/simple_shell.git
 ```
