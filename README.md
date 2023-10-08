@@ -82,11 +82,11 @@ https://github.com/GodsonicCodes/simple_shell.git
 
 
 ### Comprehend The Basic usage :bulb:
-- First, Fork this Repository [Learn how to fork repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
-- Then Clone [Learn how to clone ](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
-- Create an executable by running the following command:
+- First and most important you would have to Fork this Repository [Learn how to fork repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
+- Then you Clone [Learn how to clone ](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+- You then Create an executable by running the following command:
 - `gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
-- From there, type in the following command and press your enter button.
+- From there onward type in the following command and press your enter button.
 - `./hsh`
 
 
