@@ -217,7 +217,8 @@ int _myhistory(info_t *);
 
 /* For toem_getline.c */
 void sigintHandler(int);
-int _getline(info_t *, char **, size_t *);
+ssize_t _getline(info_t *, char **, size_t *);
+ssize_t read_buf(info_t *info, char *buf, size_t *len);
 ssize_t get_input(info_t *);
 
 
@@ -285,5 +286,6 @@ char **strtow(char *, char *);
 
 /* For loophsh.c */
 int loophsh(char **);
+
 
 #endif
