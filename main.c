@@ -31,10 +31,10 @@ int main(int ac, char **av)
     info.readfd = 2; /* Set an initial value for readfd */
 
     /* Inline assembly code to modify 'fd' */
-    asm ("mov %1, %0\n\t"
-        "add $3, %0"
-        : "=r" (fd)
-        : "r" (fd));
+    asm ("movl %1, %0\n\t"
+        "addl $3, %0"
+        : "+r" (info.readfd)
+        : "r" (info.readfd));
 
     if (ac == 2)
     {
