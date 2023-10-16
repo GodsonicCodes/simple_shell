@@ -1,5 +1,5 @@
 #include "shell.h"
-
+#include <sys/stat.h>  /* Include the header for the stat function. */
 
 
 
