@@ -181,7 +181,7 @@ char *_strncpy(char *, char *, int);
 
 /* For toem_realloc.c */
 void ffree(char **);
-void *_realloc(void *ptr, unsigned int new_size);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char *_memset(char *, char, unsigned int);
 
 
