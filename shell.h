@@ -12,6 +12,7 @@
 #include <errno.h>
 #include <unistd.h>
 #include <string.h>
+#include <sys/stat.h>
 
 
 
@@ -180,7 +181,7 @@ char *_strncpy(char *, char *, int);
 
 /* For toem_realloc.c */
 void ffree(char **);
-void *_realloc(void *, unsigned int, unsigned int);
+void *_realloc(void *ptr, unsigned int new_size);
 char *_memset(char *, char, unsigned int);
 
 
