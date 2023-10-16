@@ -28,6 +28,8 @@ int main(int ac, char **av)
 {
     info_t info; /* Declare a single info_t structure */
 
+    int fd; /* Declare the 'fd' variable at the beginning of the function */
+
     /* Initialize the fields of the info_t structure */
     info.argc = ac;
     info.line_count = 0;
