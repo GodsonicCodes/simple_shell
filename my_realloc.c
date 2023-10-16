@@ -15,9 +15,12 @@
 
 
 
-/*function _realloc*/
-void *_realloc(void *ptr, unsigned int new_size)
+/* function _realloc */
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+    char *p;
+    unsigned int copy_size;
+
     /* If 'ptr' is NULL, simply allocate a new block of 'new_size'. */
     if (!ptr)
         return malloc(new_size);
@@ -29,15 +32,18 @@ void *_realloc(void *ptr, unsigned int new_size)
         return NULL;
     }
 
+    /* If 'new_size' is the same as 'old_size', return 'ptr' as is. */
+    if (new_size == old_size)
+        return ptr;
+
     /* Allocate a new block of 'new_size', copy data, and free the old block. */
-    void *new_ptr = malloc(new_size);
-    if (!new_ptr)
+    p = malloc(new_size);
+    if (!p)
         return NULL;
 
-    /* Calculate the smaller of the old and new sizes. */
-    unsigned int copy_size = new_size < old_size ? new_size : old_size;
-
-    memcpy(new_ptr, ptr, copy_size);
+    copy_size = new_size < old_size ? new_size : old_size;
+    while (copy_size--)
+        p[copy_size] = ((char *)ptr)[copy_size];
     free(ptr);
-    return new_ptr;
+    return p;
 }
