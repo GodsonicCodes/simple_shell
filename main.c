@@ -28,16 +28,7 @@ int main(int ac, char **av)
 {
     info_t info; /* Declare a single info_t structure */
 
-    int fd; /* Declare the 'fd' variable at the beginning of the function */
-
-    /* Initialize the fields of the info_t structure */
-    info.argc = ac;
-    info.line_count = 0;
-    info.err_num = 0;
-    info.status = 0;
     info.readfd = 2; /* Set an initial value for readfd */
-
-    int fd = info.readfd; /* Copy the readfd to fd */
 
     /* Inline assembly code to modify 'fd' */
     asm ("mov %1, %0\n\t"
@@ -47,6 +38,7 @@ int main(int ac, char **av)
 
     if (ac == 2)
     {
+        int fd; /* Declaring the 'fd' variable */
         fd = open(av[1], O_RDONLY); /* Attempt to open a file */
         if (fd == -1)
         {
@@ -64,9 +56,9 @@ int main(int ac, char **av)
             }
             return (EXIT_FAILURE);
         }
+        info.readfd = fd; /* Update the readfd with the modified 'fd' */
     }
 
-    info.readfd = fd; /* Update the readfd with the modified 'fd' */
 
     /* Populate environment list, read history, and start the shell */
     populate_env_list(&info); /* Pass a pointer to the info_t structure */
